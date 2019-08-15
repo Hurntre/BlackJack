@@ -1,0 +1,25 @@
+{
+  "name": "blackjack",
+  "version": "1.0.0",
+  "description": "The first package.json I will create",
+  "main": "BlackJackUpdate.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Hurntre/BlackJack.git"
+  },
+  "keywords": [
+    "BlackJack"
+  ],
+  "author": "Adefolaju",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Hurntre/BlackJack/issues"
+  },
+  "homepage": "https://github.com/Hurntre/BlackJack#readme"
+}
+
+
+
