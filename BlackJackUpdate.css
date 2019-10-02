@@ -1,27 +1,49 @@
- p, h2, h4 {
-    font-family: Arial, Helvetica, sans-serif;
- }
-
- #title, #Welcome,#buttons {
-     text-align: center
- }
-
-
- #playerCardsDisplay, #dealerCardsDisplay {
-     
-     width: 300px;
-     height: 200px;
-     padding: 10px;
-     border: 5px solid grey;
-     border-style: inset;
-
- }
-
- /* #dealerCardsDisplay  {
-    background-color: yellow;
-    width: 300px;
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Calibri";
 } 
-*/
+ 
+
+
+h1 {
+    display: block;
+    margin: 0;
+    text-align: center;
+    color: white;
+    background: steelblue;
+
+}
+
+#container {
+    max-width: 800px;
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    border: 2px solid steelblue;
+    margin-top: 50px;
+    margin-bottom: 0;
+    padding-bottom: 1rem;
+}
+
+#gameName {
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    background: steelblue;
+    color: white;
+}
+
+#winner{
+	background: white;
+    height: 40px;
+    line-height: 40px;
+	text-align: center;
+    color: white;
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+}
 
 #main-display {  
     display: flex;
@@ -30,4 +52,67 @@
     justify-content: space-around;
     margin: auto;
     width: 100%;
+}
+
+#Dealer, #Player {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+ #playerCardsDisplay, #dealerCardsDisplay {
+     width: 300px;
+     height: 150px;
+     padding: 10px;
+     border: 5px solid grey;
+     border-style: ridge;
+     border-bottom: none;
+     border-top: none;
+     margin: 0;
+ }
+
+ #playerScoreDisplay, #dealerScoreDisplay {
+     padding: 10px;
+     border: 5px solid steelblue;
+     border-top: none;
+     margin: 0;
+     color: white;
+     background: steelblue;
+ }
+
+
+
+
+
+
+
+
+#textArea{
+    display: block;
+    margin: 0;
+    margin-bottom: 1rem;
+    background: brown;
+
+}
+
+#buttons {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+button {
+    border: 2px solid steelblue;
+    border-radius: 50%;
+	background: none;
+    text-transform: uppercase;
+    text-align: center;
+    height: 70px;
+    width: 70px;
+	font-weight: 700;
+	font-size: inherit;
+	color: steelblue;
+	letter-spacing: 1px;
+	transition: all 0.3s;
+	--webkit-transition: all 0.3s;
+	--mozs-transition: all 0.3s;
+    outline: none;
 }

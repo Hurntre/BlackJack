@@ -1,44 +1,46 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title> BlackJack </title>
-        <meta charset="UTF-8">
-        <meta name="Author" content="Adefolaju Ariyo">
-        <meta name="Keyword" content="BlackJack">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" type="text/css" href="BlackJackUpdate.css" >
-    </head>
-    <body>
-            <h1 id="title"> BlackJack </h1>
-            <hr/>
-            <br>
-            <div id="Welcome">
-            <h2 id ="textArea"> Welcome to BlackJack! </h2>
-            <button id="new-game-button">New Game!</button>
-            </div>
-            <div id="main-display">
-                <div id="Dealer">
-                    <h1> Dealer </h1>
-                    <h4> Cards: </h4>
-                    <p id="dealerCardsDisplay"> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorum, natus adipisci eum accusantium rerum pariatur minus quia. Doloribus deleniti suscipit, tenetur dicta illum tempora, aliquam, asperiores earum quisquam debitis natus!</p>
-                    <p id="dealerScoreDisplay"> </p>
-                </div>
-                <div id="Player">
-                    <h1> Player </h1>
-                    <h4> Cards: </h4>
-                    <p id="playerCardsDisplay"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas ad rem ut, quidem atque iste. Corporis eius impedit nam sit accusantium. Magni quisquam et officiis inventore explicabo ea aut eligendi!</p>
-                    <p id="playerScoreDisplay"> </p>
-                </div>
-                
-            </div>
-        </main>
 
-        <div id="buttons">
-        <button id="hit-button"> Hit! </button>
-        <button id="stay-button"> Stay </button>
+<head>
+    <title> BlackJack </title>
+    <meta charset="UTF-8">
+    <meta name="Author" content="Adefolaju Ariyo">
+    <meta name="Keyword" content="BlackJack">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="BlackJackUpdate.css">
+</head>
+
+<body>
+    <div id="container">
+        <h1 id="gameName"> BlackJack </h1>
+        <div id="winner">
+            <p id="textArea"> Welcome to BlackJack! </p>
+        </div>
+        <div id="main-display">
+            <div id="Dealer">
+                <h1> Dealer </h1>
+                <p id="dealerCardsDisplay"> Lorem </p>
+                <p id="dealerScoreDisplay"> </p>
+            </div>
+            <div id="Player">
+                <h1> Player </h1>
+                <p id="playerCardsDisplay"> Lorem </p>
+                <p id="playerScoreDisplay"> </p>
+            </div>
+
         </div>
 
-        <script src="BlackJackUpdate.js"></script>
 
-    </body>
+        <div id="buttons">
+            <button id="hit-button"> Hit! </button>
+            <button id="stay-button"> Stay </button>
+            <button id="new-game-button">New Game</button>
+        </div>
+
+    </div>
+
+    <script src="BlackJackUpdate.js"></script>
+
+</body>
+
 </html>

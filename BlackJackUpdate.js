@@ -32,8 +32,8 @@ let deck = [];
 
 Player.style.display = 'none';
 Dealer.style.display = 'none';
-hitButton.style.visibility = 'hidden';
-stayButton.style.visibility = 'hidden';
+hitButton.style.display = 'none';
+stayButton.style.display = 'none';
 
 function createDeck() {
         const deck = [];
@@ -48,8 +48,6 @@ function createDeck() {
         }
         return deck;
 }
-
-console.log(createDeck());
 
 function shuffleDeck(deck) {
         for (let i = 0; i < deck.length; i++) {
@@ -129,6 +127,11 @@ function checkForEndOfGame() {
         if (dealerScore <= 21 && dealerCards.length === 5) {
                 gameOver = true;
                 playerWon = false;
+        } 
+        // to allow dealer win if his card is up to 5 and less than 21 in value
+          else if (playerScore <= 21 && playerCards.length === 5) {
+                gameOver = true;
+                playerWon = true;
         } else if (playerScore > 21) {
                 playerWon = false;
                 gameOver = true;
@@ -167,11 +170,11 @@ function showStatus() {
         // display dealer and player card in their box
         dealerCardsDisplay.innerText = dealerCardString;
 
-        dealerScoreDisplay.innerText = `score: ${  dealerScore}`;
+        dealerScoreDisplay.innerText = `Score: ${  dealerScore}`;
 
         playerCardsDisplay.innerText = playerCardString;
 
-        playerScoreDisplay.innerText = `score: ${  playerScore}`;
+        playerScoreDisplay.innerText = `Score: ${  playerScore}`;
 
         Player.style.display = 'block';
         Dealer.style.display = 'block';
@@ -187,31 +190,29 @@ function showStatus() {
 
         if (gameOver) {
                 if (playerWon) {
-                        textArea.innerText = 'YOU WIN!';
+                        textArea.textContent = 'YOU WIN! YOU SABI GAN O. NEW GAME?';
                 } else if (!playerWon && !draw) {
-                        textArea.innerText = 'DEALER WINS';
+                        textArea.textContent = 'DEALER WINS, TRY AGAIN';
                 }
                 // to denote draw
                 else if (draw) {
-                        textArea.innerText = "It is a DRAW!!! Let's go again";
+                        textArea.textContent = "It is a DRAW!!! Let's go again";
                 }
 
-                // make result text appear when there is result to announce
-                textArea.style.visibility = 'visible';
-
-                newGameButton.style.visibility = 'visible';
-                hitButton.style.visibility = 'hidden';
-                stayButton.style.visibility = 'hidden';
+                newGameButton.style.display = 'inline-block';
+                hitButton.style.display = 'none';
+                stayButton.style.display = 'none';
         }
 }
 
-// when dealer gets 20 ans i have 19 it says draw
+
 
 newGameButton.addEventListener('click', function() {
-        // make result text disappear until there is result
-        textArea.style.visibility = 'hidden';
+        // change text to encourage player
+        textArea.textContent = 'LEGGO';
         gameStarted = true;
         gameOver = false;
+        draw = false;
         playerWon = false;
 
         deck = createDeck();
@@ -219,9 +220,9 @@ newGameButton.addEventListener('click', function() {
         dealerCards = [getNextCard(), getNextCard()];
         playerCards = [getNextCard(), getNextCard()];
 
-        newGameButton.style.visibility = 'hidden';
-        hitButton.style.visibility = 'visible';
-        stayButton.style.visibility = 'visible';
+        newGameButton.style.display = 'none';
+        hitButton.style.display = 'inline-block';
+        stayButton.style.display = 'inline-block';
         showStatus();
 });
 
@@ -236,3 +237,4 @@ stayButton.addEventListener('click', function() {
         checkForEndOfGame();
         showStatus();
 });
+
